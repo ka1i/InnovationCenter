@@ -1,11 +1,12 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/ka1i/InnovationCenter/pkg/version"
+	"github.com/ka1i/InnovationCenter/internal/graphical"
 )
 
 func main() {
-	fmt.Printf("version: %s\n", version.VERSION)
+	flags()
+
+	app := graphical.UserInterface()
+	app.Run()
 }
