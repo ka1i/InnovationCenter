@@ -14,13 +14,10 @@ func init() {
 
 func UserInterface() cocoa.NSApplication {
 	cocoa.TerminateAfterWindowsClose = false
-
 	app := cocoa.NSApp_WithDidLaunch(func(n objc.Object) {
 		// create window
 		window.WaterMark()
-		//window.WindowBrowser()
-
-		// listen events
+		window.Browser()
 	})
 	app.ActivateIgnoringOtherApps(true)
 	return app

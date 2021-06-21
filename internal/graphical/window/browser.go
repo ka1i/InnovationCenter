@@ -9,7 +9,7 @@ import (
 	"github.com/progrium/macdriver/webkit"
 )
 
-func WindowBrowser() {
+func Browser() {
 	config := webkit.WKWebViewConfiguration_New()
 	config.Preferences().SetValueForKey(core.True, core.String("developerExtrasEnabled"))
 
